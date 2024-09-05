@@ -15,23 +15,25 @@ const ToDoListApp = () => {
     }
 
     const itemsHtml = todoList.length > 0 ? todoList.map((item, index) => (
-        <li key={index} className="list-group-item d-flex justify-content-between align-items-center onpointer">
+        <li key={index} className="list-group-item d-flex justify-content-between align-items-center bg-light customOpacity-2 onpointer">
             {item} <i className="fa-regular fa-trash-can" onClick={() => deletetask(index)}></i>
         </li>
     )) : (
-        <li className="list-group-item text-center">
+        <li className="list-group-item text-center bg-light customOpacity-2">
             There is no task in the list, try to add one...
         </li>
     );
 
     return (
-        <div className="">
-            <h1 className="display-1">
-                todos
-            </h1>
+        <div>
+            <div className="d-flex justify-content-center mt-5 opacity-75">
+                <h1 className="text-muted display-1 bg-light col-11 col-sm-8 col-md-6 col-lg-5 col-xxl-4 rounded-4">
+                    <i class="fa-solid fa-list display-3" />t<i class="fa-regular fa-circle-check display-5" />d<i class="fa-regular fa-circle-check display-5" />
+                </h1>
+            </div>
             <div className="listDiv d-flex justify-content-center">
-                <ul className="list-group col-11 col-sm-7 col-md-5 col-lg-4 col-xxl-3">
-                    <li className="list-group-item">
+                <ul className="list-group col-11 col-sm-8 col-md-6 col-lg-5 col-xxl-4">
+                    <li className="list-group-item customOpacity-1">
                         <input onKeyUp={(e) => (e.target.value !== "" && e.key == "Enter") && addTask(e.target)}
                             className="todoInput" type="text" placeholder="What needs to be done?" />
                     </li>
