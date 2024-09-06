@@ -32,7 +32,7 @@ const ToDoListApp = () => {
                 </h1>
             </div>
             <div className="listDiv d-flex justify-content-center">
-                <ul className="list-group col-11 col-sm-8 col-md-6 col-lg-5 col-xxl-4">
+                <ul className="list-group col-11 col-sm-8 col-md-6 col-lg-5 col-xxl-4 mb-3">
                     <li className="list-group-item customOpacity-1">
                         <input onKeyUp={(e) => (e.target.value !== "" && e.key == "Enter") && addTask(e.target)}
                             className="todoInput" type="text" placeholder="What needs to be done?" />
